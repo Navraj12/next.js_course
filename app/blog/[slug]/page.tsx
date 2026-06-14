@@ -1,10 +1,8 @@
-const page = () => {
-  return (
-    <div>
-      <h1>My Blog Post</h1>
-      <p>what`s up guys</p>
-    </div>
-  );
-};
+export default function Page() {
+  return <h1>Hello, Blog Post Page </h1>;
+}
+// Use the searchParams prop when you need search parameters to load data for the page (e.g. pagination, filtering from a database).
 
-export default page;
+// Use useSearchParams when search parameters are used only on the client (e.g. filtering a list already loaded via props).
+
+// As a small optimization, you can use new URLSearchParams(window.location.search) in callbacks or event handlers to read search params without triggering re-renders.
