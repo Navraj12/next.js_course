@@ -21,7 +21,7 @@
 // Can fetch data directly from APIs or databases.
 // HTML is generated on the server and sent to the browser.
 
-export default function Page() {
+export default async function Page() {
   const data = await fetch(`https://api.vercel.app/blog`);
   const posts = await data.json();
   return (
@@ -33,5 +33,5 @@ export default function Page() {
   );
 }
 
-
-// fetching data 
+// fetching data
+// To fetch data with the fetch API, turn your component into an asynchronous function, and await the fetch call.
